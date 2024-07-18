@@ -1,18 +1,19 @@
-// components/HomepageMainBody.js
+"use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-import { newsData } from "./newsData";
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
+import { newsData } from './newsData';
 
 export function HomepageMainBody() {
   return (
     <div className="flex flex-col min-h-dvh">
-      <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
+      <header className="sticky top-0 z-10 bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between backdrop-blur-md">
         <div className="flex items-center gap-4">
-          <UniversityIcon className="w-8 h-8" />
-          <h1 className="text-2xl font-bold">Acme University</h1>
+          <Image src="https://mastercardfdn.org/wp-content/themes/mastercard-foundation/assets/img/mc-logo-black.svg" alt="Acme University Logo" width={32} height={32} className="w-8 h-8" />
+          <h1 className="text-2xl font-bold">KNUST Mastercard Foundation</h1>
         </div>
         <nav className="hidden md:flex items-center gap-6">
           <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
@@ -44,23 +45,11 @@ export function HomepageMainBody() {
           <CarouselContent>
             <CarouselItem>
               <div className="flex flex-col md:flex-row items-center gap-8 px-4 md:px-0">
-                <img
-                  src="/placeholder.svg"
-                  width={600}
-                  height={400}
-                  alt="Carousel Image"
-                  className="rounded-lg w-full md:w-1/2 object-cover"
-                />
+                <img src="/placeholder.svg" width={600} height={400} alt="Carousel Image" className="rounded-lg w-full md:w-1/2 object-cover" />
                 <div className="space-y-4 text-center md:text-left">
                   <h2 className="text-3xl font-bold">Upcoming Campus Event</h2>
-                  <p className="text-muted-foreground">
-                    Join us for our annual campus event featuring speakers, workshops, and more.
-                  </p>
-                  <Link
-                    href=""
-                    className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
-                    prefetch={false}
-                  >
+                  <p className="text-muted-foreground">Join us for our annual campus event featuring speakers, workshops, and more.</p>
+                  <Link href="#" className="inline-flex items-center gap-2 text-primary font-medium hover:underline" prefetch={false}>
                     Learn More
                     <ArrowRightIcon className="w-4 h-4" />
                   </Link>
@@ -69,21 +58,11 @@ export function HomepageMainBody() {
             </CarouselItem>
             <CarouselItem>
               <div className="flex flex-col md:flex-row items-center gap-8 px-4 md:px-0">
-                <img
-                  src="/placeholder.svg"
-                  width={600}
-                  height={400}
-                  alt="Carousel Image"
-                  className="rounded-lg w-full md:w-1/2 object-cover"
-                />
+                <img src="/placeholder.svg" width={600} height={400} alt="Carousel Image" className="rounded-lg w-full md:w-1/2 object-cover" />
                 <div className="space-y-4 text-center md:text-left">
                   <h2 className="text-3xl font-bold">New Degree Program</h2>
                   <p className="text-muted-foreground">Explore our latest degree program in Sustainable Engineering.</p>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
-                    prefetch={false}
-                  >
+                  <Link href="#" className="inline-flex items-center gap-2 text-primary font-medium hover:underline" prefetch={false}>
                     Learn More
                     <ArrowRightIcon className="w-4 h-4" />
                   </Link>
@@ -92,21 +71,11 @@ export function HomepageMainBody() {
             </CarouselItem>
             <CarouselItem>
               <div className="flex flex-col md:flex-row items-center gap-8 px-4 md:px-0">
-                <img
-                  src="/placeholder.svg"
-                  width={600}
-                  height={400}
-                  alt="Carousel Image"
-                  className="rounded-lg w-full md:w-1/2 object-cover"
-                />
+                <img src="/placeholder.svg" width={600} height={400} alt="Carousel Image" className="rounded-lg w-full md:w-1/2 object-cover" />
                 <div className="space-y-4 text-center md:text-left">
                   <h2 className="text-3xl font-bold">Research Highlights</h2>
                   <p className="text-muted-foreground">Discover the latest groundbreaking research from our faculty.</p>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
-                    prefetch={false}
-                  >
+                  <Link href="#" className="inline-flex items-center gap-2 text-primary font-medium hover:underline" prefetch={false}>
                     Learn More
                     <ArrowRightIcon className="w-4 h-4" />
                   </Link>
@@ -165,26 +134,6 @@ function ArrowRightIcon(props) {
     >
       <path d="M5 12h14" />
       <path d="m12 5 7 7-7 7" />
-    </svg>
-  );
-}
-
-function UniversityIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 19V7l-10-5L2 7v12" />
-      <path d="M6 14h12v7H6z" />
     </svg>
   );
 }
