@@ -13,31 +13,63 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-10 bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between backdrop-blur-md">
-      <div className="flex items-center gap-4">
-        <Image src="https://mastercardfdn.org/wp-content/themes/mastercard-foundation/assets/img/mc-logo-black.svg" alt="Acme University Logo" width={32} height={32} className="w-8 h-8" />
-        <h1 className="text-2xl font-bold">KNUST Mastercard Foundation</h1>
+    <header className="sticky top-0 z-10 bg-primary text-primary-foreground py-4 px-6 flex flex-col md:flex-row md:items-center md:justify-between backdrop-blur-md">
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <Link href="/" className="flex items-center gap-4">
+          <Image
+            src="https://mastercardfdn.org/wp-content/themes/mastercard-foundation/assets/img/mc-logo-black.svg"
+            alt="KNUST Mastercard Foundation Logo"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+          />
+          <h1 className="text-2xl font-bold">KNUST Mastercard Foundation</h1>
+        </Link>
+        <Button variant="outline" size="icon" className="md:hidden" onClick={toggleMenu}>
+          <MenuIcon className="w-6 h-6" />
+          <span className="sr-only">Toggle navigation</span>
+        </Button>
       </div>
-      <nav className="hidden md:flex items-center gap-6">
-        <Link href="/about" className="text-sm font-medium hover:underline" prefetch={false}>About</Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>Academics</Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>Admissions</Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>Campus Life</Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>News</Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>Contact</Link>
+      <nav className="hidden md:flex items-center gap-6 w-full justify-center mt-4 md:mt-0">
+        <Link href="/about" className="text-sm font-medium hover:underline" prefetch={false}>
+          About
+        </Link>
+        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+          Academics
+        </Link>
+        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+          Complain
+        </Link>
+        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+          Campus Life
+        </Link>
+        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+          News
+        </Link>
+        <Link href="/contactUs" className="text-sm font-medium hover:underline" prefetch={false}>
+          Contact
+        </Link>
       </nav>
-      <Button variant="outline" size="icon" className="md:hidden" onClick={toggleMenu}>
-        <MenuIcon className="w-6 h-6" />
-        <span className="sr-only">Toggle navigation</span>
-      </Button>
       {isMenuOpen && (
-        <div className="md:hidden bg-primary text-primary-foreground py-4 px-6 flex flex-col items-start">
-          <Link href="/about" className="text-sm font-medium hover:underline py-1" prefetch={false}>About</Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>Academics</Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>Admissions</Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>Campus Life</Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>News</Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>Contact</Link>
+        <div className="md:hidden w-full bg-primary text-primary-foreground py-4 px-6 flex flex-col items-start mt-4">
+          <Link href="/about" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+            About
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+            Academics
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+            Complain
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+            Campus Life
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+            News
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+            Contact
+          </Link>
         </div>
       )}
     </header>

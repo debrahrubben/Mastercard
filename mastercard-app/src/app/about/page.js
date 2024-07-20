@@ -25,7 +25,8 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
-export function AboutPage() {
+
+export default function AboutPage() {
   return (
     (<div className="flex flex-col min-h-[100dvh]">
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">

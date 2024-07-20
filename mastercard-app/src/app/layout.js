@@ -1,9 +1,7 @@
 // src/app/layout.js
-
+import "./globals.css"
 import { Footer } from "@/components/component/Footer";
 import { Header } from "@/components/component/Header";
-
-
 
 export default function RootLayout({ children }) {
   return (
@@ -11,7 +9,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-       <Footer />
+        <Footer />
       </body>
     </html>
   );
