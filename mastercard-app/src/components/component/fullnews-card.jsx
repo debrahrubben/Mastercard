@@ -1,5 +1,3 @@
-// components/FullnewsCard.js
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import '../../app/globals.css'
@@ -28,7 +26,7 @@ export function FullnewsCard({ article }) {
             <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">{article.headline}</h2>
             <p className="mb-8 text-sm text-muted-foreground">By {article.author} | {article.date}</p>
             <article className="prose prose-gray max-w-none dark:prose-invert">
-              {article.content.split("\n").map((paragraph, idx) => (
+              {(article.content || "").split("\n").map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
               ))}
             </article>
