@@ -1,9 +1,12 @@
-import { HomepageMainBody } from '@/components/component/homepage-main-body'
+
 import '../app/globals.css'
 import React from 'react'
+import { HomepageMainBody } from '@/pages/homepage-main-body'
 
 export default function page() {
   return (
-    <div><HomepageMainBody /></div>
+    <>
+    <HomepageMainBody />
+    </>
   )
 }
