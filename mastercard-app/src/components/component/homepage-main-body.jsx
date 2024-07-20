@@ -11,7 +11,7 @@ import { carouselData } from "./carouselData"; // Import carousel data
 export function HomepageMainBody() {
   return (
     <div className="flex flex-col min-h-dvh">
-      <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between backdrop-blur-lg">
+      <header className="sticky top-0 z-10 bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between backdrop-blur-md ">
         <div className="flex items-center gap-4">
           <Image src="https://mastercardfdn.org/wp-content/themes/mastercard-foundation/assets/img/mc-logo-black.svg" alt="Acme University Logo" width={32} height={32} className="w-8 h-8" />
           <h1 className="text-2xl font-bold">KNUST Mastercard Foundation</h1>
@@ -76,8 +76,85 @@ export function HomepageMainBody() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted text-muted-foreground py-4 px-6 text-center">
-        <p>&copy; {new Date().getFullYear()} Acme University. All rights reserved.</p>
+      <footer className="bg-muted p-6 md:py-12 w-full">
+        <div
+          className="container max-w-7xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
+          <div className="grid gap-1">
+            <h3 className="font-semibold">About</h3>
+            <Link href="#" prefetch={false}>
+              History
+            </Link>
+            <Link href="#" prefetch={false}>
+              Mission & Values
+            </Link>
+            <Link href="#" prefetch={false}>
+              Leadership
+            </Link>
+            <Link href="#" prefetch={false}>
+              Accreditations
+            </Link>
+          </div>
+          <div className="grid gap-1">
+            <h3 className="font-semibold">Academics</h3>
+            <Link href="#" prefetch={false}>
+              Undergraduate
+            </Link>
+            <Link href="#" prefetch={false}>
+              Graduate
+            </Link>
+            <Link href="#" prefetch={false}>
+              Online Programs
+            </Link>
+            <Link href="#" prefetch={false}>
+              Research
+            </Link>
+          </div>
+          <div className="grid gap-1">
+            <h3 className="font-semibold">Admissions</h3>
+            <Link href="#" prefetch={false}>
+              Apply
+            </Link>
+            <Link href="#" prefetch={false}>
+              Tuition & Aid
+            </Link>
+            <Link href="#" prefetch={false}>
+              Visit Campus
+            </Link>
+            <Link href="#" prefetch={false}>
+              International Students
+            </Link>
+          </div>
+          <div className="grid gap-1">
+            <h3 className="font-semibold">Campus Life</h3>
+            <Link href="#" prefetch={false}>
+              Housing
+            </Link>
+            <Link href="#" prefetch={false}>
+              Dining
+            </Link>
+            <Link href="#" prefetch={false}>
+              Student Organizations
+            </Link>
+            <Link href="#" prefetch={false}>
+              Athletics
+            </Link>
+          </div>
+          <div className="grid gap-1">
+            <h3 className="font-semibold">Resources</h3>
+            <Link href="#" prefetch={false}>
+              Library
+            </Link>
+            <Link href="#" prefetch={false}>
+              Career Services
+            </Link>
+            <Link href="#" prefetch={false}>
+              Counseling
+            </Link>
+            <Link href="#" prefetch={false}>
+              Disability Services
+            </Link>
+          </div>
+        </div>
       </footer>
     </div>
   );
