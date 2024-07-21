@@ -12,10 +12,10 @@ export function HomepageMainBody() {
       <main className="flex-1 bg-slate-100">
         <div className="w-full max-w-7xl mx-auto py-12 md:py-16 lg:py-20 overflow-hidden relative">
           <Carousel className="relative">
-            <CarouselContent className="relative">
+            <CarouselContent className="relative flex">
               {carouselData.map((item) => (
-                <CarouselItem key={item.id} className="relative">
-                  <div className="flex flex-col md:flex-row items-center gap-8 px-4 md:px-0">
+                <CarouselItem key={item.id} className="relative flex items-center justify-center w-full flex-shrink-0">
+                  <div className="flex flex-col md:flex-row items-center gap-8 px-4 md:px-0 w-full max-w-6xl">
                     <img
                       src={item.imageUrl}
                       width={600}
@@ -28,7 +28,7 @@ export function HomepageMainBody() {
                       <p className="text-muted-foreground">{item.description}</p>
                       <Link
                         href={`/carousel/${item.id}`}
-                        className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+                        className="inline-flex items-center gap-2 text-primary font-medium hover:underline text-amber-500"
                         prefetch={false}
                       >
                         Learn More

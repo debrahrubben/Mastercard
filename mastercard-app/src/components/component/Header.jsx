@@ -14,7 +14,7 @@ export function Header() {
   };
 
   const handleTouchOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (menuRef.current && !menuRef.current.contains(event.target) && !event.target.closest('.menu-button')) {
       setIsMenuOpen(false);
     }
   };
@@ -42,9 +42,21 @@ export function Header() {
             height={32}
             className="w-8 h-8"
           />
-          <h1 className="text-2xl font-bold">KNUST Mastercard Foundation</h1>
+          <Image
+            src="/knustlogo.png"
+            alt="KNUST Logo"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+          />
+          <h1 className="text-sm md:text-2xl font-bold">KNUST Mastercard Foundation</h1>
         </Link>
-        <Button variant="outline" size="icon" className="md:hidden" onClick={toggleMenu}>
+        <Button
+          variant="outline"
+          size="icon"
+          className="md:hidden menu-button"
+          onClick={toggleMenu}
+        >
           <MenuIcon className="w-6 h-6" />
           <span className="sr-only">Toggle navigation</span>
         </Button>
@@ -53,19 +65,19 @@ export function Header() {
         <Link href="/about" className="text-sm font-medium hover:underline" prefetch={false}>
           About
         </Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+        <Link href="/resources" className="text-sm font-medium hover:underline" prefetch={false}>
           Academics
         </Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
-          Admissions
+        <Link href="/complaintdesk" className="text-sm font-medium hover:underline" prefetch={false}>
+          Complaint desk
         </Link>
         <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
           Campus Life
         </Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+        <Link href="/#news" className="text-sm font-medium hover:underline" prefetch={false}>
           News
         </Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+        <Link href="/contactUs" className="text-sm font-medium hover:underline" prefetch={false}>
           Contact
         </Link>
       </nav>
@@ -74,19 +86,19 @@ export function Header() {
           <Link href="/about" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             About
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+          <Link href="/resources" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             Academics
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
-            Admissions
+          <Link href="/complaintdesk" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+            Complaint desk
           </Link>
           <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             Campus Life
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+          <Link href="/#news" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             News
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+          <Link href="/contactUs" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             Contact
           </Link>
         </div>
