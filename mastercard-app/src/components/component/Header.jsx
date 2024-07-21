@@ -1,16 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
+
+  const handleTouchOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener("touchstart", handleTouchOutside);
+    } else {
+      document.removeEventListener("touchstart", handleTouchOutside);
+    }
+
+    return () => {
+      document.removeEventListener("touchstart", handleTouchOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="sticky top-0 z-10 bg-primary text-primary-foreground py-4 px-6 flex flex-col md:flex-row md:items-center md:justify-between backdrop-blur-md">
@@ -38,7 +57,7 @@ export function Header() {
           Academics
         </Link>
         <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
-          Complain
+          Admissions
         </Link>
         <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
           Campus Life
@@ -46,12 +65,12 @@ export function Header() {
         <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
           News
         </Link>
-        <Link href="/contactUs" className="text-sm font-medium hover:underline" prefetch={false}>
+        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
           Contact
         </Link>
       </nav>
       {isMenuOpen && (
-        <div className="md:hidden w-full bg-primary text-primary-foreground py-4 px-6 flex flex-col items-start mt-4">
+        <div ref={menuRef} className="md:hidden w-full bg-primary text-primary-foreground py-4 px-6 flex flex-col items-start mt-4">
           <Link href="/about" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             About
           </Link>
@@ -59,7 +78,7 @@ export function Header() {
             Academics
           </Link>
           <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
-            Complain
+            Admissions
           </Link>
           <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             Campus Life
