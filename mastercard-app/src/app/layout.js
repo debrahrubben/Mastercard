@@ -9,6 +9,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
+        <div class="h-2 bg-gradient-to-r from-red-700 to-yellow-500 rounded-full"></div>
         <Footer />
       </body>
     </html>

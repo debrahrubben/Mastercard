@@ -19,140 +19,97 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 import { Card, CardContent } from "@/components/ui/card"
 
-export default function resources() {
+export default function Resources() {
   return (
-    (<div className="w-full py-12 md:py-24 lg:py-32">
+    <div className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <div
-          className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Resources for Your Success</h1>
-            <p
-              className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Discover the wide range of resources available to support your academic and personal growth at our
               college.
             </p>
           </div>
         </div>
-        <div
-          className="mx-auto grid grid-cols-1 gap-8 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-primary p-3 text-primary-foreground">
-                <LibraryIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">Campus Library</h3>
-                <p className="text-muted-foreground">
-                  Explore our extensive collection of books, journals, and digital resources to support your academic
-                  research and learning.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-secondary p-3 text-secondary-foreground">
-                <BriefcaseIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">Career Center</h3>
-                <p className="text-muted-foreground">
-                  Get personalized career guidance, access job postings, and prepare for interviews to kickstart your
-                  professional journey.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-muted p-3 text-muted-foreground">
-                <HeartIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">Mental Health Services</h3>
-                <p className="text-muted-foreground">
-                  Prioritize your well-being with access to counseling, support groups, and wellness workshops to help
-                  you thrive.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-accent p-3 text-accent-foreground">
-                <UsersIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">Student Clubs</h3>
-                <p className="text-muted-foreground">
-                  Explore a wide range of student clubs and organizations to connect with like-minded peers, develop new
-                  skills, and enrich your college experience.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-primary p-3 text-primary-foreground">
-                <LaptopIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">IT Support</h3>
-                <p className="text-muted-foreground">
-                  Get technical assistance with your devices, software, and network connectivity to ensure a seamless
-                  academic experience.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-secondary p-3 text-secondary-foreground">
-                <AccessibilityIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">Disability Services</h3>
-                <p className="text-muted-foreground">
-                  Receive personalized accommodations and support to ensure your academic success, regardless of your
-                  abilities or needs.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-muted p-3 text-muted-foreground">
-                <GraduationCapIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">Academic Advising</h3>
-                <p className="text-muted-foreground">
-                  Meet with our dedicated academic advisors to plan your course of study, explore majors, and ensure you
-                  stay on track to graduate.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="group">
-            <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-              <div className="rounded-full bg-accent p-3 text-accent-foreground">
-                <DollarSignIcon className="h-8 w-8" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold">Financial Aid</h3>
-                <p className="text-muted-foreground">
-                  Explore various financial aid options, including scholarships, grants, and loans, to make your college
-                  education more accessible.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="mx-auto grid grid-cols-1 gap-8 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {resourceData.map((resource, index) => (
+            <Card key={index} className="group transform transition-transform hover:scale-105 hover:shadow-lg">
+              <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
+                <div className={`rounded-full p-3 ${resource.bgColor} ${resource.textColor}`}>
+                  {resource.icon}
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg font-semibold text-amber-500">{resource.title}</h3>
+                  <p className="text-muted-foreground">{resource.description}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
-    </div>)
+    </div>
   );
 }
+
+const resourceData = [
+  {
+    title: "Campus Library",
+    description: "Explore our extensive collection of books, journals, and digital resources to support your academic research and learning.",
+    icon: <LibraryIcon className="h-8 w-8" />,
+    bgColor: "bg-primary",
+    textColor: "text-primary-foreground",
+  },
+  {
+    title: "Career Center",
+    description: "Get personalized career guidance, access job postings, and prepare for interviews to kickstart your professional journey.",
+    icon: <BriefcaseIcon className="h-8 w-8" />,
+    bgColor: "bg-secondary",
+    textColor: "text-secondary-foreground",
+  },
+  {
+    title: "Mental Health Services",
+    description: "Prioritize your well-being with access to counseling, support groups, and wellness workshops to help you thrive.",
+    icon: <HeartIcon className="h-8 w-8" />,
+    bgColor: "bg-muted",
+    textColor: "text-muted-foreground",
+  },
+  {
+    title: "Student Clubs",
+    description: "Explore a wide range of student clubs and organizations to connect with like-minded peers, develop new skills, and enrich your college experience.",
+    icon: <UsersIcon className="h-8 w-8" />,
+    bgColor: "bg-accent",
+    textColor: "text-accent-foreground",
+  },
+  {
+    title: "IT Support",
+    description: "Get technical assistance with your devices, software, and network connectivity to ensure a seamless academic experience.",
+    icon: <LaptopIcon className="h-8 w-8" />,
+    bgColor: "bg-primary",
+    textColor: "text-primary-foreground",
+  },
+  {
+    title: "Disability Services",
+    description: "Receive personalized accommodations and support to ensure your academic success, regardless of your abilities or needs.",
+    icon: <AccessibilityIcon className="h-8 w-8" />,
+    bgColor: "bg-secondary",
+    textColor: "text-secondary-foreground",
+  },
+  {
+    title: "Academic Advising",
+    description: "Meet with our dedicated academic advisors to plan your course of study, explore majors, and ensure you stay on track to graduate.",
+    icon: <GraduationCapIcon className="h-8 w-8" />,
+    bgColor: "bg-muted",
+    textColor: "text-muted-foreground",
+  },
+  {
+    title: "Financial Aid",
+    description: "Explore various financial aid options, including scholarships, grants, and loans, to make your college education more accessible.",
+    icon: <DollarSignIcon className="h-8 w-8" />,
+    bgColor: "bg-accent",
+    textColor: "text-accent-foreground",
+  },
+];
 
 function AccessibilityIcon(props) {
   return (

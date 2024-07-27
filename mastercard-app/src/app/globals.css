@@ -28,5 +28,15 @@
     --radius: 0.5rem;
   }
 }
+.background-image {
+  background-image: url('https://img.freepik.com/premium-photo/hand-young-female-psychoanalyst-making-notes-notebook-session_274679-36640.jpg?w=900');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
 
 
