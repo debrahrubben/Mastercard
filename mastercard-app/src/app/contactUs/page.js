@@ -62,8 +62,8 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-bold mb-2">Our Location</h2>
             <div className="text-muted-foreground">
-              <p>123 Main St.</p>
-              <p>Anytown, USA 12345</p>
+              <p>KNUST Campus</p>
+              <p>Kumasi, Ghana 12345</p>
             </div>
           </div>
           <div>
@@ -71,11 +71,11 @@ export default function ContactPage() {
             <div className="text-muted-foreground space-y-2">
               <div className="flex items-center gap-2">
                 <PhoneIcon className="h-5 w-5" />
-                <p>+1 (555) 555-5555</p>
+                <p>+233 (0) 592532564</p>
               </div>
               <div className="flex items-center gap-2">
                 <MailIcon className="h-5 w-5" />
-                <p>info@acme.com</p>
+                <p>info@knustmastercardfnd</p>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold mb-2">Map</h2>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg"
+                src="https://img.freepik.com/premium-photo/urban-vector-city-map-guangzhou-china_601748-43869.jpg?w=1060"
                 width="600"
                 height="400"
                 alt="Location Map"

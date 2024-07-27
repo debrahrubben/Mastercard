@@ -63,7 +63,7 @@ export function HomepageMainBody() {
                   <p className="text-muted-foreground mb-4">
                     {article.content.slice(0, 100)}...
                   </p>
-                  <Link href={`/${article.id}`} className="text-primary font-medium hover:underline" prefetch={false}>
+                  <Link href={`/${article.id}`} className="text-primary font-medium hover:underline text-amber-500" prefetch={false}>
                     Read More
                   </Link>
                 </CardContent>

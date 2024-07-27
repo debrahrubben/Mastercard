@@ -24,6 +24,7 @@ To read more about using these font, please visit the Next.js documentation:
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import Image from "next/image";
 
 
 export default function AboutPage() {
@@ -33,8 +34,14 @@ export default function AboutPage() {
         <div
           className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
-            <MountainIcon className="h-12 w-12 mx-auto" />
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mastercard Foundation</h1>
+            <Image
+            src="https://mastercardfdn.org/wp-content/themes/mastercard-foundation/assets/img/mc-logo-black.svg"
+            alt="KNUST Mastercard Foundation Logo"
+            width={32}
+            height={32}
+            className="h-16 w-16 mx-auto"
+          />
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">Mastercard Foundation</h1>
             <p
               className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               The Mastercard Foundation is a private charitable foundation that advances financial inclusion and
@@ -48,7 +55,7 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Mission</div>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-red-700">Our Mission</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Empowering People Through Financial Inclusion
               </h2>
@@ -59,12 +66,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Core Values</div>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-red-700">Our Core Values</div>
               <ul className="grid gap-4">
                 <li className="flex items-start gap-4">
                   <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <h3 className="text-lg font-bold">Empowerment</h3>
+                    <h3 className="text-lg font-bold text-amber-500">Empowerment</h3>
                     <p className="text-muted-foreground">
                       We believe in empowering people to take control of their financial futures and contribute to their
                       communities.
@@ -74,7 +81,7 @@ export default function AboutPage() {
                 <li className="flex items-start gap-4">
                   <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <h3 className="text-lg font-bold">Collaboration</h3>
+                    <h3 className="text-lg font-bold text-amber-500">Collaboration</h3>
                     <p className="text-muted-foreground">
                       We work closely with our partners and communities to understand their needs and deliver tailored
                       solutions.
@@ -84,7 +91,7 @@ export default function AboutPage() {
                 <li className="flex items-start gap-4">
                   <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <div>
-                    <h3 className="text-lg font-bold">Impact</h3>
+                    <h3 className="text-lg font-bold text-amber-500">Impact</h3>
                     <p className="text-muted-foreground">
                       We are committed to creating lasting, positive change in the lives of the people and communities
                       we serve.
@@ -99,7 +106,7 @@ export default function AboutPage() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
         <div className="container px-4 md:px-6">
           <div className="space-y-4 text-center">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Team</div>
+            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-red-700">Our Team</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Meet the Mastercard Foundation Team
             </h2>
