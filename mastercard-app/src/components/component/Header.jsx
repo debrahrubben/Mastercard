@@ -71,7 +71,7 @@ export function Header() {
         <Link href="/complaintdesk" className="text-sm font-medium hover:underline" prefetch={false}>
           Complaint desk
         </Link>
-        <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+        <Link href="/campuslife" className="text-sm font-medium hover:underline" prefetch={false}>
           Campus Life
         </Link>
         <Link href="/#news" className="text-sm font-medium hover:underline" prefetch={false}>
@@ -92,7 +92,7 @@ export function Header() {
           <Link href="/complaintdesk" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             Complaint desk
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline py-1" prefetch={false}>
+          <Link href="campuslife" className="text-sm font-medium hover:underline py-1" prefetch={false}>
             Campus Life
           </Link>
           <Link href="/#news" className="text-sm font-medium hover:underline py-1" prefetch={false}>
