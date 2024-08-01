@@ -6,7 +6,7 @@ import { newsData } from "@/components/component/newsData";
 import { carouselData } from "@/components/component/carouselData"; // Import carousel data
 import Link from "next/link";
 
-export function HomepageMainBody() {
+export default function HomepageMainBody() {
   return (
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1 bg-slate-100">
