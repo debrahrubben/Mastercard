@@ -6,7 +6,7 @@ import { newsData } from "@/components/component/newsData";
 import { carouselData } from "@/components/component/carouselData"; // Import carousel data
 import Link from "next/link";
 
-export default function HomepageMainBody() {
+const HomepageMainBody = () => {
   return (
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1 bg-slate-100">
@@ -75,6 +75,7 @@ export default function HomepageMainBody() {
     </div>
   );
 }
+export default HomepageMainBody;
 
 function ArrowRightIcon(props) {
   return (
