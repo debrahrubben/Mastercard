@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { newsData } from "@/components/component/newsData";
@@ -16,7 +16,7 @@ export function HomepageMainBody() {
               {carouselData.map((item) => (
                 <CarouselItem key={item.id} className="relative flex items-center justify-center w-full flex-shrink-0">
                   <div className="flex flex-col md:flex-row items-center gap-8 px-4 md:px-0 w-full max-w-6xl">
-                    <img
+                    <Image
                       src={item.imageUrl}
                       width={600}
                       height={400}
@@ -49,7 +49,7 @@ export function HomepageMainBody() {
             {newsData.map((article) => (
               <Card key={article.id}>
                 <CardContent>
-                  <img
+                  <Image
                     src={article.imageUrl}
                     width={300}
                     height={200}

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import '../../app/globals.css'
+import Image from "next/image";
 
 export function FullnewsCard({ article }) {
   return (
@@ -15,7 +16,7 @@ export function FullnewsCard({ article }) {
       </header>
       <main className="flex-1">
         <div className="container mx-auto px-4 py-12 md:px-6 lg:py-16">
-          <img
+          <Image
             src={article.imageUrl}
             width={1200}
             height={600}
