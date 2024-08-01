@@ -7,37 +7,37 @@ export default function Campuslife() {
       name: "Ama Boakye",
       major: "Computer Science",
       quote: "The Mastercard Foundation scholarship has been a game-changer for me. It has not only covered my tuition and living expenses, but also provided me with invaluable opportunities for personal and professional development.",
-      image: "/placeholder.svg",
+      image: "https://img.freepik.com/premium-photo/vertical-photo-confident-woman-african-with-braids-wearing-brown-shirt-people-concept_1031763-849.jpg?w=360",
     },
     {
       name: "Kwame Mensah",
       major: "Mechanical Engineering",
       quote: "The Mastercard Foundation has been a true partner in my educational journey. Their support has not only eased my financial burden, but also empowered me to pursue my passions and make a positive impact on my community.",
-      image: "/placeholder.svg",
+      image: "https://img.freepik.com/free-photo/sideways-black-person-looking-away_23-2148749548.jpg?ga=GA1.1.2048238812.1713552295&semt=ais_hybrid",
     },
     {
       name: "Adwoa Agyeman",
       major: "Nursing",
       quote: "The Mastercard Foundation has been a true catalyst in my academic and personal growth. Their support has not only allowed me to focus on my studies, but also provided me with opportunities to develop my leadership skills and give back to my community.",
-      image: "/placeholder.svg",
+      image: "https://img.freepik.com/free-photo/side-view-woman-posing-with-afro-hair_23-2149659582.jpg?ga=GA1.1.2048238812.1713552295&semt=ais_hybrid",
     },
     {
       name: "Kofi Amoah",
       major: "Economics",
       quote: "The Mastercard Foundation has been a true partner in my educational journey. Their support has not only eased my financial burden, but also empowered me to pursue my passions and make a positive impact on my community.",
-      image: "/placeholder.svg",
+      image: "https://img.freepik.com/free-photo/portrait-young-african-american-man_23-2148932869.jpg?ga=GA1.1.2048238812.1713552295&semt=ais_hybrid",
     },
     {
       name: "Esi Mensah",
       major: "Business Administration",
       quote: "The Mastercard Foundation scholarship has been a game-changer for me. It has not only covered my tuition and living expenses, but also provided me with invaluable opportunities for personal and professional development.",
-      image: "/placeholder.svg",
+      image: "https://img.freepik.com/free-photo/portrait-young-woman-smiling-isolated_23-2149158567.jpg?ga=GA1.1.2048238812.1713552295&semt=ais_hybrid",
     },
     {
       name: "Kwasi Appiah",
       major: "Civil Engineering",
       quote: "The Mastercard Foundation has been a true catalyst in my academic and personal growth. Their support has not only allowed me to focus on my studies, but also provided me with opportunities to develop my leadership skills and give back to my community.",
-      image: "/placeholder.svg",
+      image: "https://img.freepik.com/free-photo/worldface-namibian-guy-white-background_53876-146195.jpg?t=st=1722547949~exp=1722551549~hmac=de5116a0e6500c12017317eb02502b37cdee45246e6ed43ba64aaf22b2a78b2e&w=740",
     },
   ];
 
